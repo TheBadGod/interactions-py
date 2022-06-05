@@ -34,6 +34,7 @@ class ScheduledEventRequest:
             "entity_metadata",
             "description",
             "entity_type",
+            "image",
         )
         data = {k: v for k, v in payload.items() if k in valid_keys}
 
@@ -106,6 +107,8 @@ class ScheduledEventRequest:
             "entity_metadata",
             "description",
             "entity_type",
+            "image",
+            "status",
         )
         data = {k: v for k, v in payload.items() if k in valid_keys}
         return await self._req.request(
